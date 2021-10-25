@@ -1,0 +1,44 @@
+<head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+</head>
+
+<body>
+    <h1> Homework 2</h1>
+    <table style="height: 335px; width: 700px;">
+        <tbody>
+            <tr>
+            <td style="width: 139px; text-align: center;"><strong>Time</strong></td>
+            <td style="width: 139.125px; text-align: center;"><strong>Destination</strong></td>
+            <td style="width: 137.875px; text-align: center;"><strong>Train</strong></td>
+            <td style="width: 139px; text-align: center;"><strong>Track</strong></td>
+            <td style="width: 139px; text-align: center;"><strong>Status</strong></td>
+            </tr>
+    {% for i in data %}
+        <tr>
+        <td style="width: 139px;">{{i.departure_time}}</td>
+        <td style="width: 139.125px;">{{i.destination}}</td>
+        <td style="width: 137.875px;">{{i.vehicle}}</td>
+        <td style="width: 139px;">{{i.track}}</td>
+        <td style="width: 139px;">{{i.status}}</td>
+        </tr>
+
+    {% endfor %}
+        </tbody>
+    </table>
+</body>
